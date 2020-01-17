@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ SITENAME }} - {{ page.title }}{%endblock%}
+
+{% block content %}
+    <section id="styles" style="padding: 90px 0 72px; background: #fff;">
+    {% block content_title %}
+    <div class="row section-head">
+      <h1>{{ page.title }}</h1>
+    </div>
+   {% endblock content_title %}
+
+    {% block inner_content %}
+    <div class="row add-bottom">{% block col1_content %}</div>
+    <div class="row add-bottom">{% block col2_content %}</div>
+    {% endblock inner_content %}
+
+    </section>
+{% endblock %}

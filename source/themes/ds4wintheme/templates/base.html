@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}"><!--<![endif]-->
+<head>
+{% block head %}
+
+<title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+<meta charset="utf-8" />
+<meta content="DS4 Tool for Windows" name="description" />
+<meta content="Dualshock 4,Windows" name="keywords" />
+<meta content="Ryochan7" name="author" />
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+<meta content="#1c2228" name="theme-color" />
+<link href="{{ SITEURL }}/theme/css/default.css" rel="stylesheet" />
+<link href="{{ SITEURL }}/theme/css/layout.css" rel="stylesheet" />
+<link href="{{ SITEURL }}/theme/css/media-queries.css" rel="stylesheet" />
+<link href="{{ SITEURL }}/theme/css/animate.css" rel="stylesheet" />
+<link href="{{ SITEURL }}/theme/css/prettyPhoto.css" rel="stylesheet" />
+{% block extra_css %}{% endblock extra_css %}
+<script src="{{ SITEURL }}/theme/js/modernizr.js"></script>
+<link href="{{ SITEURL }}/favicon.png" rel="shortcut icon" />
+{% endblock head %}
+</head>
+<body>
+<div id="preloader">
+<div id="status"><img alt="" height="64" src="{{ SITEURL }}/theme/images/preloader.gif" width="64" /></div>
+</div>
+
+<header>
+<div class="logo"><a class="{% block logo_classes %}{% endblock logo_classes %}" href="{% block logo_link %}{{ SITEURL }}/{% endblock logo_link %}"><img alt="" src="{{ SITEURL }}/theme/images/DS4W2.png" /> </a></div>
+{% block extra_navigation %}
+{% endblock extra_navigation %}
+<ul class="header-social">
+<li><a href="https://github.com/Ryochan7/DS4Windows"><img class="tint" src="{{ SITEURL }}/theme/images/github.png" /> </a></li>
+<li><a href="http://forums.pcsx2.net/Thread-DS4Windows-J2K"><img class="tint" src="{{ SITEURL }}/theme/images/forum.png" /> </a></li>
+</ul>
+</header>
+
+{% block content %}{% endblock content %}
+
+{% block footer %}
+<section id="contact">
+<footer>
+<div class="row">
+<div class="six columns info"><img alt="" src="{{ SITEURL }}/theme/images/DS4W2.png" />
+<p>DS4Windows was a project originally started by <a href="http://forums.pcsx2.net/Thread-DS4-To-XInput-Wrapper">InhexSTER</a> by the name of DS4 Tool. The tool was later branched off by <a href="http://forums.pcsx2.net/Thread-DS4Windows-yet-another-DualShock-4-driver">electrobrains</a> and then by <a href="https://forums.pcsx2.net/Thread-DS4Windows-J2K">Jays2Kings</a></p>.
+</div>
+<div class="six columns right-cols">
+<div class="row">
+<div class="columns">
+<h3><img src="{{ SITEURL }}/theme/images/github.png" /><br />
+Source Code</h3>
+<ul>
+<li><a href="https://github.com/Ryochan7/DS4Windows">DS4Windows</a></li>
+<li><a href="https://github.com/Ryochan7/DS4Updater">DS4Updater</a></li>
+</ul>
+</div>
+<div class="columns">
+<h3><img src="{{ SITEURL }}/theme/images/forum.png" /><br />
+Forums</h3>
+<ul>
+<li><a href="http://forums.pcsx2.net/Thread-DS4Windows-J2K">PCSX2</a></li>
+</ul>
+</div>
+<div class="columns last">
+<h3><img src="{{ SITEURL }}/theme/images/email.png" /><br />
+Contact Me</h3>
+<ul>
+<li>ryoohki7 [AT] yahoo.com</li>
+</ul>
+</div>
+<div class="columns last">&nbsp;
+<h3><img src="{{ SITEURL }}/theme/images/pp.png" /><br />
+Donate</h3>
+<ul>
+<li><a href="https://paypal.me/ryochan7">Paypal</a></li>
+</ul>
+</div>
+</div>
+</div>
+<p class="copyright">&copy; 2014 Woo | Design by <a href="http://www.styleshout.com/" title="Styleshout">Styleshout</a></p>
+<div id="go-top"></div>
+</div>
+</footer>
+</section>
+{% endblock footer %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><script>
+        window.jQuery || document.write('<script src="{{ SITEURL }}/theme/js/jquery-1.10.2.min.js"><\/script>')
+    </script><script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-migrate-1.2.1.min.js"></script><script src="{{ SITEURL }}/theme/js/jquery.flexslider.js"></script><script src="{{ SITEURL }}/theme/js/waypoints.js"></script><script src="{{ SITEURL }}/theme/js/jquery.fittext.js"></script><script src="{{ SITEURL }}/theme/js/jquery.fitvids.js"></script><script src="{{ SITEURL }}/theme/js/imagelightbox.js"></script><script src="{{ SITEURL }}/theme/js/jquery.prettyPhoto.js"></script><script src="{{ SITEURL }}/theme/js/main.js"></script>
+{% block extra_js %}{% endblock extra_js %}
+</body>
+</html>
