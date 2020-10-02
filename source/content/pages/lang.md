@@ -6,5 +6,14 @@ Template: lang
 ### Supported Languages
 
 * English
+* Chinese
+* Czech
+* Dutch
+* French
+* German
+* Italian
 * Japanese
+* Portuguese (Brazilian)
+* Russian
+* Spanish
 
