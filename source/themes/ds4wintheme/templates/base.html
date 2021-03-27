@@ -1,91 +1,159 @@
 <!DOCTYPE html>
-<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}"><!--<![endif]-->
-<head>
-{% block head %}
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+    <head>
+        {% block head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="DS4 Tool for Windows" />
+        <meta name="keywords" content=Dualshock 4,Windows" />
+        <meta name="author" content="Ryochan7" />
 
-<title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-<meta charset="utf-8" />
-<meta content="DS4 Tool for Windows" name="description" />
-<meta content="Dualshock 4,Windows" name="keywords" />
-<meta content="Ryochan7" name="author" />
-<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
-<meta content="#1c2228" name="theme-color" />
-<link href="{{ SITEURL }}/theme/css/default.css" rel="stylesheet" />
-<link href="{{ SITEURL }}/theme/css/layout.css" rel="stylesheet" />
-<link href="{{ SITEURL }}/theme/css/media-queries.css" rel="stylesheet" />
-<link href="{{ SITEURL }}/theme/css/animate.css" rel="stylesheet" />
-<link href="{{ SITEURL }}/theme/css/prettyPhoto.css" rel="stylesheet" />
-{% block extra_css %}{% endblock extra_css %}
-<script src="{{ SITEURL }}/theme/js/modernizr.js"></script>
-<link href="{{ SITEURL }}/favicon.png" rel="shortcut icon" />
-{% endblock head %}
-</head>
-<body>
-<div id="preloader">
-<div id="status"><img alt="" height="64" src="{{ SITEURL }}/theme/images/preloader.gif" width="64" /></div>
-</div>
+        <!-- Site Title -->
+        <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 
-<header>
-<div class="logo"><a class="{% block logo_classes %}{% endblock logo_classes %}" href="{% block logo_link %}{{ SITEURL }}/{% endblock logo_link %}"><img alt="" src="{{ SITEURL }}/theme/images/DS4W2.png" /> </a></div>
-{% block extra_navigation %}
-{% endblock extra_navigation %}
-<ul class="header-social">
-<li><a href="https://github.com/Ryochan7/DS4Windows"><img class="tint" src="{{ SITEURL }}/theme/images/github.png" /> </a></li>
-<li><a href="http://forums.pcsx2.net/Thread-DS4Windows-J2K"><img class="tint" src="{{ SITEURL }}/theme/images/forum.png" /> </a></li>
-</ul>
-</header>
+        <!-- Site favicon -->
+        <link rel="shortcut icon" href="{{ SITEURL }}/theme/images/favicon.png">
 
-{% block content %}{% endblock content %}
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css">
+
+        <!-- MFP Css -->
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/magnific-popup.css">
+
+        <!-- Material Icon -->
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/materialdesignicons.min.css" />
+
+        <!-- Pe7 Icon -->
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pe-icon-7.css">
+
+        <!-- Owl Slider -->
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/owl.carousel.css" />
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/owl.theme.css" />
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/owl.transitions.css" />
+
+        <!-- Custom  Css -->
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/custom.css" />
+        {% block extra_css %}{% endblock extra_css %}
+        {% endblock head %}
+    </head>
+    <body>
+
+        <!--Navbar Start-->
+        <nav class="navbar navbar-expand-lg fixed-top custom-nav sticky">
+            {% block extra_navigation %}
+            <div class="container">
+                <!-- LOGO -->
+                <a class="logo navbar-brand" href="{{ SITEURL }}/">
+                    <img src="{{ SITEURL }}/theme/images/DS4W2.png" alt="" class="img-fluid"> 
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mx-auto navbar-center" id="mySidenav">
+                        <li class="nav-item">
+                            <a href="{{ SITEURL }}/#home" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ SITEURL }}/#features" class="nav-link">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ SITEURL }}/#screenshots" class="nav-link">Screenshots</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ SITEURL }}/#changelog" class="nav-link">Changelog</a>
+                        </li>
+                    </ul>
+                    <a href="https://github.com/Ryochan7/DS4Windows/" target="_blank"><img src="{{ SITEURL }}/theme/images/github.png" alt="DS4Windows GitHub page"></a>
+                </div>
+            </div>
+            {% endblock extra_navigation %}
+        </nav>
+        <!-- Navbar End -->
+
+{% block content %}
+{% endblock content %}
 
 {% block footer %}
-<section id="contact">
-<footer>
-<div class="row">
-<div class="six columns info"><img alt="" src="{{ SITEURL }}/theme/images/DS4W2.png" />
-<p>DS4Windows was a project originally started by <a href="http://forums.pcsx2.net/Thread-DS4-To-XInput-Wrapper">InhexSTER</a> by the name of DS4 Tool. The tool was later branched off by <a href="http://forums.pcsx2.net/Thread-DS4Windows-yet-another-DualShock-4-driver">electrobrains</a> and then by <a href="https://forums.pcsx2.net/Thread-DS4Windows-J2K">Jays2Kings</a></p>.
-</div>
-<div class="six columns right-cols">
-<div class="row">
-<div class="columns">
-<h3><img src="{{ SITEURL }}/theme/images/github.png" /><br />
-Source Code</h3>
-<ul>
-<li><a href="https://github.com/Ryochan7/DS4Windows">DS4Windows</a></li>
-<li><a href="https://github.com/Ryochan7/DS4Updater">DS4Updater</a></li>
-</ul>
-</div>
-<div class="columns">
-<h3><img src="{{ SITEURL }}/theme/images/forum.png" /><br />
-Forums</h3>
-<ul>
-<li><a href="http://forums.pcsx2.net/Thread-DS4Windows-J2K">PCSX2</a></li>
-</ul>
-</div>
-<div class="columns last">
-<h3><img src="{{ SITEURL }}/theme/images/email.png" /><br />
-Contact Me</h3>
-<ul>
-<li>ryoohki7 [AT] yahoo.com</li>
-</ul>
-</div>
-<div class="columns last">&nbsp;
-<h3><img src="{{ SITEURL }}/theme/images/pp.png" /><br />
-Donate</h3>
-<ul>
-<li><a href="https://paypal.me/ryochan7">Paypal</a></li>
-</ul>
-</div>
-</div>
-</div>
-<p class="copyright">&copy; 2014 Woo | Design by <a href="http://www.styleshout.com/" title="Styleshout">Styleshout</a></p>
-<div id="go-top"></div>
-</div>
-</footer>
-</section>
+        <!-- Start Contact/Footer -->
+        <section class="section bg-footer-color" id="footer">
+            <div class="container">
+                <div class="row mt-3">
+                    <div class="col-lg-6">
+                        <h6 class="mt-3 text-white text-uppercase">About DS4Windows</h6>
+                        <div class="mt-3">
+                            <p class="about_oxcer">
+                                This fork of DS4Windows is a project originally based on the work of <a href="http://ds4windows.com/" target="_blank">Jays2Kings</a>.
+                                Many changes have been made to the project since it was originally forked in March 2017. The head of the current project is <a href="https://github.com/Ryochan7" target="_blank">Ryochan7</a>
+                                and many contributions have been made on GitHub by <a href="https://raw.githubusercontent.com/Ryochan7/DS4Windows/jay/contributors.txt" target="_blank">users</a>.
+                            </p>
+                        </div>
+                        <ul class="list-inline fot_social">
+                            <li class="list-inline-item"><a href="https://github.com/Ryochan7/DS4Windows/" class="social-icon text-muted"><i class="mdi mdi-github-circle"></i></a></li>
+                            <li class="list-inline-item"><a href="https://twitter.com/ds4windows" class="social-icon text-muted"><i class="mdi mdi-twitter"></i></a></li>
+                        </ul>
+                    </div>
+
+                    {#<div class="col-lg-2">
+                        <h6 class="mt-3 text-white text-uppercase">Pages</h6>
+                        <ul class="list-unstyled footer_menu_list mt-3">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Client</a></li>
+                            <li><a href="#">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <h6 class="mt-3 text-white text-uppercase">Support</h6>
+                        <ul class="list-unstyled footer_menu_list mt-3">
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Live Chat</a></li>
+                            <li><a href="#">Downloads</a></li>
+                            <li><a href="#">Press Kit</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <h6 class="mt-3 text-white text-uppercase">Locations</h6>
+                        <ul class="list-unstyled footer_menu_list mt-3">
+                            <li><a href="#">Melbourne</a></li>
+                            <li><a href="#">London</a></li>
+                            <li><a href="#">New York</a></li>
+                            <li><a href="#">San Francisco</a></li>
+                            <li><a href="#">Ontario</a></li>
+                        </ul>
+                    </div>#}
+                </div>
+                <div class="row pt-3">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <p class="copy-rights mb-0">2018 &copy; Softie. Design by ThemesBoss.</p>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+        <!-- End Contact/Footer -->
 {% endblock footer %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><script>
-        window.jQuery || document.write('<script src="{{ SITEURL }}/theme/js/jquery-1.10.2.min.js"><\/script>')
-    </script><script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-migrate-1.2.1.min.js"></script><script src="{{ SITEURL }}/theme/js/jquery.flexslider.js"></script><script src="{{ SITEURL }}/theme/js/waypoints.js"></script><script src="{{ SITEURL }}/theme/js/jquery.fittext.js"></script><script src="{{ SITEURL }}/theme/js/jquery.fitvids.js"></script><script src="{{ SITEURL }}/theme/js/imagelightbox.js"></script><script src="{{ SITEURL }}/theme/js/jquery.prettyPhoto.js"></script><script src="{{ SITEURL }}/theme/js/main.js"></script>
-{% block extra_js %}{% endblock extra_js %}
-</body>
+
+        <!-- Back To Top -->    
+        <a href="#" class="back_top"> <i class="pe-7s-angle-up"> </i> </a>
+
+        <!-- Javascript -->
+        <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
+        <script src="{{ SITEURL }}/theme/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ SITEURL }}/theme/js/jquery.easing.min.js"></script>
+        <script src="{{ SITEURL }}/theme/js/scrollspy.min.js"></script>
+
+        <!-- Owl Js -->
+        <script src="{{ SITEURL }}/theme/js/owl.carousel.min.js"></script>
+
+        <!-- MFP JS -->
+        <script src="{{ SITEURL }}/theme/js/jquery.magnific-popup.min.js"></script>
+
+        <!-- Custom Js   -->
+        <script src="{{ SITEURL }}/theme/js/custom.js"></script>  
+        {% block extra_js %}{% endblock extra_js %} 
+    </body>
 </html>
