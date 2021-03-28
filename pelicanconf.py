@@ -38,6 +38,7 @@ PAGE_URL = "{slug}/"
 PAGE_SAVE_AS = "{slug}/index.html"
 #SITEURL = "https://ryochan7.github.io/ds4windows-site"
 #LOAD_CONTENT_CACHE = False
+DIRECT_TEMPLATES = ["index"]
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
