@@ -37,6 +37,7 @@ ARTICLE_SAVE_AS = "blog/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html"
 PAGE_URL = "{slug}/"
 PAGE_SAVE_AS = "{slug}/index.html"
 SITEURL = "https://ryochan7.github.io/ds4windows-site"
+#SITEURL = ""
 #LOAD_CONTENT_CACHE = False
 DIRECT_TEMPLATES = ["index"]
 
