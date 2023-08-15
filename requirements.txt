@@ -1,6 +1,6 @@
 blinker==1.4
 certifi==2019.11.28
-pelican==4.6.0
+pelican==4.7.0
 feedgenerator==1.9.1
 docutils==0.17.1
 pytz==2021.1
